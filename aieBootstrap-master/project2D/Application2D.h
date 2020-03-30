@@ -5,6 +5,7 @@
 
 class PhysicsScene;
 class circle;
+class aligned_bounding_box;
 class Application2D : public aie::Application {
 public:
 
@@ -26,6 +27,7 @@ protected:
 
 	circle* star;
 	circle* earth;
+	aligned_bounding_box* square;
 	PhysicsScene* m_physicsScene;
 	float m_timer;
 };

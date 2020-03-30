@@ -9,6 +9,7 @@
 
 #include "PhysicsScene.h"
 #include "Circle.h"
+#include "aligned_bounding_box.h"
 
 Application2D::Application2D() {
 
@@ -43,8 +44,11 @@ bool Application2D::startup() {
 	star = (new circle(glm::vec2(5, 5), glm::vec2(0, 0), 1, 1, glm::vec4(1, 1, 0, 1)));
 	earth = (new circle(glm::vec2(-5, 5), glm::vec2(0, 0), 1, 1, glm::vec4(0, 0, 1, 1)));
 
+	square = (new aligned_bounding_box(glm::vec2(0, 0), glm::vec2(5, 5), glm::vec2(0, 0), 1));
+
 	m_physicsScene->addObject(star);
 	m_physicsScene->addObject(earth);
+	m_physicsScene->addObject(square);
 	//m_physicsScene->addObject(new circle(glm::vec2(-5, 5), glm::vec2(0, 0), 1, 1, glm::vec4(0, 0, 1, 1)));
 	return true;
 }

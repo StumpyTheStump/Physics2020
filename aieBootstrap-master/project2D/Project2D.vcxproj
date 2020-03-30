@@ -172,6 +172,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="aligned_bounding_box.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="collision_manager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -182,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AABB.h" />
+    <ClInclude Include="aligned_bounding_box.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="collision_manager.h" />
     <ClInclude Include="PhysicsObject.h" />

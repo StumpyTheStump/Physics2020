@@ -7,7 +7,12 @@ class aligned_bounding_box : public Rigidbody
 public:
 
 	aligned_bounding_box(const glm::vec2& a_position,
-						 const glm::vec2& a_extents);
+						 const glm::vec2& a_extents,
+						 const glm::vec2& a_velocity,
+						 float a_mass);
+
+	virtual void makeGizmo();
+	virtual bool checkCollision(PhysicsObject* pOther);
 
 	const glm::vec2 get_position() const;
 	void set_position(const glm::vec2& a_position);

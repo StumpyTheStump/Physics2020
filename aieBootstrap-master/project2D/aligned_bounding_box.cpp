@@ -1,8 +1,18 @@
 #include "aligned_bounding_box.h"
 #include <cmath>
-aligned_bounding_box::aligned_bounding_box(const glm::vec2& position, const glm::vec2& a_extents) :
-										   Rigidbody(ShapeType::AABB, position), extents(a_extents)
+aligned_bounding_box::aligned_bounding_box(const glm::vec2& position, const glm::vec2& a_extents, const glm::vec2& a_velocity, const float a_mass) :
+										   Rigidbody(ShapeType::AABB, position, a_velocity, a_mass), extents(a_extents)
 {
+}
+
+void aligned_bounding_box::makeGizmo()
+{
+	aie::Gizmos::add2DAABB(m_position, extents * 0.5f, glm::vec4(0, 1, 1, 1));
+}
+
+bool aligned_bounding_box::checkCollision(PhysicsObject* pOther)
+{
+	return false;
 }
 
 	
